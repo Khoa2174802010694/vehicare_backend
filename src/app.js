@@ -13,6 +13,10 @@ const rescueRequestRoutes = require("./routes/rescueRequestRoutes");
 const rescueProviderRoutes = require("./routes/rescueProviderRoutes");
 const rescueAssignmentRoutes = require("./routes/rescueAssignmentRoutes");
 const forumRoutes = require("./routes/forumRoutes");
+const trafficLawRoutes = require("./routes/trafficLawRoutes");
+const partsCatalogRoutes = require("./routes/partsCatalogRoutes");
+const insurancePackageRoutes = require("./routes/insurancePackageRoutes");
+const vehicleDocumentRoutes = require("./routes/vehicleDocumentRoutes");
 
 const app = express();
 
@@ -30,6 +34,10 @@ app.use("/api/rescue-requests", rescueRequestRoutes);
 app.use("/api/rescue-providers", rescueProviderRoutes);
 app.use("/api/rescue-assignments", rescueAssignmentRoutes);
 app.use("/api/forum", forumRoutes);
+app.use("/api/traffic-laws", trafficLawRoutes);
+app.use("/api/parts", partsCatalogRoutes);
+app.use("/api/insurance-packages", insurancePackageRoutes);
+app.use("/api/vehicle-documents", vehicleDocumentRoutes);
 
 app.get("/", (req, res) => {
   res.send("Vehicare API running");
